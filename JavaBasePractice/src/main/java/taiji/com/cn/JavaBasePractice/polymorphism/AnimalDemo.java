@@ -1,5 +1,7 @@
 package taiji.com.cn.JavaBasePractice.polymorphism;
 
+import sun.management.resources.agent;
+
 public abstract class AnimalDemo {
 	/**
 	 * 面向对象
@@ -17,24 +19,39 @@ public abstract class AnimalDemo {
 	 * 向上转型：子类引用的对象转换为父类的类型，即将子类对象转为父类对象，父类对象可以是接口
 	 * 向下转型：把父类对象转为子类对象
 	 */
-	abstract void eat();
-	abstract void sleep();
+	int num = 10;
+	static int age = 20;
+	
+	public void eat() {
+		System.out.println("动物在吃饭");
+	}
+	public void sleep() {
+		System.out.println("动物在睡觉");
+	}
+	public void run() {
+		System.out.println("动物在跑步");
+	}
 	public static void main(String[] args) {
 		function(new Cat());
 		function(new Dog());
 		
-		AnimalDemo animal = new Cat(); //向上转型，子类对象转为父类对象
-		animal.eat();
-		animal.sleep();  
+		
 //		animal.catchMouse();//注意：转型时，子类单独的方法会丢失，animal不能访问Cat自己的方法，animal.catchMouse()会报错，
 		//子类引用不能指向父类对象 Cat c = (Cat)new Animal(); 这样时不行的。
 		
-		Cat cat = (Cat) animal;
-		cat.catchMouse();
+		
 	}
-	private static void function(Dog dog) {	
+
+	private static void function(Dog dog) {
+		// TODO Auto-generated method stub
+		
 	}
 	private static void function(Cat cat) {
+		AnimalDemo animal = new Cat(); //向上转型，子类对象转为父类对象
+		animal.eat();
+		animal.sleep();  
+		
+		
 	}
 
 		/*
