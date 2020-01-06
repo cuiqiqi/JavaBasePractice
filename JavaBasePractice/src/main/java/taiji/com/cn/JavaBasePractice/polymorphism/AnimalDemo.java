@@ -43,7 +43,7 @@ public abstract class AnimalDemo {
 
 	//输出  我吃鱼
 	Dog d = ((Dog) a);
-	d.eat();
+
 	// 报错 ： java.lang.ClassCastException：com.chengfan.animal.Cat cannot be cast to com.chengfan.animal.Dog
 	Animal a1 = new Animal();
 	Cat c1 = ((Cat) a1);
