@@ -36,19 +36,7 @@ public abstract class AnimalDemo {
 	}
 	private static void function(Cat cat) {
 	}
-	
-	//还是上面的animal和cat dog
-	AnimalDemo a = new Cat();
-	Cat c = ((Cat) a);
 
-	//输出  我吃鱼
-	Dog d = ((Dog) a);
-
-	// 报错 ： java.lang.ClassCastException：com.chengfan.animal.Cat cannot be cast to com.chengfan.animal.Dog
-	Animal a1 = new Animal();
-	Cat c1 = ((Cat) a1);
-	c1.eat();
-	// 报错 ： java.lang.ClassCastException：com.chengfan.animal.Animal cannot be cast to com.chengfan.animal.Cat
 		/*
 		 *为 什么第一段代码不报错呢？相比你也知道了，因为 a 本身就是 Cat 对象，所以它理所当然的可以向下转型为 Cat，也理所当然的不能转为
 		 * Dog，你见过一条狗突然就变成一只猫这种操蛋现象？
