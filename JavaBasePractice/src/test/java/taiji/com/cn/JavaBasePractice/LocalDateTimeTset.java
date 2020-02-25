@@ -4,7 +4,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.Instant;
-<<<<<<< HEAD
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -78,32 +77,7 @@ public class LocalDateTimeTset {
 
 		System.out.println(String.format("%s", localTime));
 	}
-	
-	
-	
-	
-=======
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
-import org.junit.Test;
-
-public class LocalDateTimeTset {
-
-	@Test
-	public void getTime() {
-		LocalDateTime dateTime = LocalDateTime.now();
-		int day = dateTime.getDayOfMonth();  //一个月中的第几天/号
-		int year = dateTime.getDayOfYear();  //一年中的第几天
-		DayOfWeek week = dateTime.getDayOfWeek();//英文的星期几，返回的是DayOfWeek
-		int hour = dateTime.getHour();      //一天中的小时(24时制，)
-
-		System.out.println(String.format("%s,%s,%s,%s,%s", day,year,week,String.valueOf(hour)));
-	}
->>>>>>> branch 'master' of https://github.com/cuiqiqi/JavaBasePractice.git
 	//LocalDateTime转Date
 	@Test
 	public void LocalDateTimeToDate() {
